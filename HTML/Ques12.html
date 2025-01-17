@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function reverse(){
+                var a = document.getElementById('bha').value;
+                var reversed = '';
+                for(var i=a.length-1; i>=0; i--){
+                    reversed = reversed+a[i];
+                }
+                if(a == reversed){
+                    alert("Is Palindrome.");
+
+                } else{
+                    alert("not Palindrome");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <p>String:</p>
+        <input type="text" id="bha" name="sname" placeholder="Enter a string"><br><br>
+        <input type="button" value="Submit" onclick="reverse()">
+        </center>
+    </body>
+</html>

@@ -1,0 +1,305 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    
+        <title>Loan Application</title>
+        <style>
+            body {
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRJ3w5Xj1xEJ7JnZYQzd3zuOigWDlUNRiCfA&s'); 
+                background-size: cover; 
+                background-repeat: no-repeat; 
+                background-position: center;
+            }
+        </style>
+        </head>
+        
+<body>
+    <div style="border: 1px solid #ccc; padding: 20px; background-color: white; width: 500px; margin: auto; border-radius: 10px;">
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+
+<h1>Business Loan Application</h1>
+<p>Personal Information</p>
+</div>
+<hr>
+
+
+
+
+
+<p><b>Name of the Applicant *</b></p>
+<div style="display: flex; align-items: center; gap:5px;">
+    <label for="prefix">Prefix:</label>
+    <select id="prefix" name="prefix">
+        <option value="Mr.">Mr.</option>
+        <option value="Ms.">Ms.</option>
+        <option value="Mrs.">Mrs.</option>
+        <option value="Dr.">Dr.</option>
+        <option value="Prof.">Prof.</option>
+    </select>
+    <br><br>
+</div>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname" required> 
+    <br><br>
+
+    
+    <label for="middlename">Middle Name:</label>
+    <input type="text" id="middlename" name="middlename">
+    <br><br>
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" required>
+    <br><br>
+
+
+<p><b>E-mail of the Applicant *</b></p>
+<div style="display: flex; align-items: center; gap: 10px;">
+    <input type="email" id="email" name="email" placeholder="Ex: myname@example.com" required>
+</div>
+
+<p><b>Phone Number of the Applicant *</b></p>
+<div style="display: flex; align-items: center; gap: 5px;">
+    <label for="area-code">Area Code:</label>
+    <input type="text" id="area-code" name="area-code" placeholder="123" style="width: 50px;" required>
+    
+    <span>-</span>
+    
+    <label for="phone-number">Phone Number:</label>
+    <input type="text" id="phone-number" name="phone-number" placeholder="456-7890" required>
+</div>
+
+<p><b>FAX Number of the Applicant </b></p>
+<div style="display: flex; align-items: center; gap: 5px;">
+    <label for="area-code">Area Code:</label>
+    <input type="text" id="area-code" name="area-code" style="width: 50px;">
+    
+    <span>-</span>
+    
+    <label for="phone-number">Phone Number:</label>
+    <input type="text" id="phone-number" name="phone-number">
+</div>
+
+<P><b>Address of Applicant *</b></P>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+    <label for="street-address">Street Address:</label>
+    <input type="text" id="street-address" name="street-address" placeholder="123 Main St" style="width :250px"required>
+    
+    <label for="street-address2">Street Address Line 2:</label>
+    <input type="text" id="street-address2" name="street-address2" placeholder="Apt 4B" style="width :250px">
+    
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" style="width :200px" required>
+    
+    <label for="state">State/Province:</label>
+    <input type="text" id="state" name="state" style="width :200px" required>
+    
+    <label for="postal-code">Postal/Zip Code:</label>
+    <input type="text" id="postal-code" name="postal-code" style="width :120px" required>
+</div>
+
+<p><b>Date of Birth</b></p>
+<div style="display: flex; gap: 10px;">
+    <label for="month">Month:</label>
+    <select id="month" name="month" required>
+        <option value="">Select Month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+
+    <label for="day">Day:</label>
+    <select id="day" name="day" required>
+        <option value="">Select Day</option>
+       
+        <script>
+            for (let i = 1; i <= 31; i++) {
+                document.write(`<option value="${i}">${i}</option>`);
+            }
+        </script>
+    </select>
+
+    <label for="year">Year:</label>
+    <select id="year" name="year" required>
+        <option value="">Select Year</option>
+       
+        <script>
+            const currentYear = new Date().getFullYear();
+            for (let i = currentYear; i >= 1900; i--) {
+                document.write(`<option value="${i}">${i}</option>`);
+            }
+        </script>
+    </select>
+</div>
+<br><br>
+
+<div style="display: flex; justify-content: space-between; margin-top: 20px;">
+    <button onclick="window.location.href='Loan2.html';" style="width: 100px; height: 30px; padding: 5px 10px; font-size: 12px; border: none; background-color: gainsboro; color: black; border-radius: 5px; cursor: pointer;">Next</button>
+   </div>
+
+
+
+</body>
+</html>
+
+
+  -->
+
+
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Application</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRJ3w5Xj1xEJ7JnZYQzd3zuOigWDlUNRiCfA&s'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+    </style>
+    <script>
+        function validateEmail() {
+            const email = document.getElementById('email').value;
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('Please enter a valid email address that contains "@" and "."');
+                return false;
+            }
+            return true; 
+        }
+        
+        function handleSubmit() {
+            if (validateEmail()) {
+                
+                window.location.href = 'Loan2.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="border: 1px solid #ccc; padding: 20px; background-color: white; width: 900px; margin: auto; border-radius: 10px;">
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <h1>Business Loan Application</h1>
+            <p>Personal Information</p>
+        </div>
+        <hr>
+
+        
+
+    <p><b>Name of the Applicant *</b></p>
+    <div style="display: flex; align-items: center; gap: 10px;">
+    <label for="prefix">Prefix:</label>
+    <select id="prefix" name="prefix">
+        <option value="Mr.">Mr.</option>
+        <option value="Ms.">Ms.</option>
+        <option value="Mrs.">Mrs.</option>
+        <option value="Dr.">Dr.</option>
+        <option value="Prof.">Prof.</option>
+    </select>
+
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname" required style="flex: 1;">
+
+    <label for="middlename">Middle Name:</label>
+    <input type="text" id="middlename" name="middlename" style="flex: 1;">
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" required style="flex: 1;">
+</div>
+
+
+        <p><b>E-mail of the Applicant *</b></p>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <input type="email" id="email" name="email" placeholder="Ex: myname@example.com" required>
+        </div>
+
+        <p><b>Phone Number of the Applicant *</b></p>
+        <div style="display: flex; align-items: center; gap: 5px;">
+            <label for="area-code">Area Code:</label>
+            <input type="text" id="area-code" name="area-code" placeholder="123" style="width: 50px;" required>
+            <span>-</span>
+            <label for="phone-number">Phone Number:</label>
+            <input type="text" id="phone-number" name="phone-number" placeholder="456-7890" required>
+        </div>
+
+        <p><b>FAX Number of the Applicant </b></p>
+        <div style="display: flex; align-items: center; gap: 5px;">
+            <label for="fax-area-code">Area Code:</label>
+            <input type="text" id="fax-area-code" name="fax-area-code" style="width: 50px;">
+            <span>-</span>
+            <label for="fax-number">Phone Number:</label>
+            <input type="text" id="fax-number" name="fax-number">
+        </div>
+
+        <p><b>Address of Applicant *</b></p>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label for="street-address">Street Address:</label>
+            <input type="text" id="street-address" name="street-address" placeholder="123 Main St" style="width: 250px" required>
+            <label for="street-address2">Street Address Line 2:</label>
+            <input type="text" id="street-address2" name="street-address2" placeholder="Apt 4B" style="width: 250px">
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" style="width: 200px" required>
+            <label for="state">State/Province:</label>
+            <input type="text" id="state" name="state" style="width: 200px" required>
+            <label for="postal-code">Postal/Zip Code:</label>
+            <input type="text" id="postal-code" name="postal-code" style="width: 120px" required>
+        </div>
+
+        <p><b>Date of Birth</b></p>
+        <div style="display: flex; gap: 10px;">
+            <label for="month">Month:</label>
+            <select id="month" name="month" required>
+                <option value="">Select Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+
+            <label for="day">Day:</label>
+            <select id="day" name="day" required>
+                <option value="">Select Day</option>
+                <script>
+                    for (let i = 1; i <= 31; i++) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+
+            <label for="year">Year:</label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <script>
+                    const currentYear = new Date().getFullYear();
+                    for (let i = currentYear; i >= 1900; i--) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+        </div>
+        <br><br>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button type="button" onclick="handleSubmit()" style="width: 100px; height: 30px; padding: 5px 10px; font-size: 12px; border: none; background-color: gainsboro; color: black; border-radius: 5px; cursor: pointer;">Next</button>
+        </div>
+    </div>
+</body>
+</html>
+

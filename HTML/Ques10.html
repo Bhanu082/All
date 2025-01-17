@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function maxprime(){
+                var v1=parseFloat(document.getElementById('minnum').value);
+                var v2=parseFloat(document.getElementById('maxnum').value);
+                let temp ="";
+                for(var i=v1;i<=v2;i++){
+                  var count=0;
+                for(var j=1;j<=i;j++){
+                    if( i%j == 0){
+                    count++;}
+                }
+                if(count == 2){
+                   temp = temp+i+" ";}
+               } 
+               document.getElementById("ans").innerHTML=temp;
+
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <p><b>Armstrong:</b></p>
+        enter first num:
+        <input type="number" id="minnum" placeholder="enter min number"><br><br>
+        enter last num:
+        <input type="number" id="maxnum"  placeholder="enter max number"><br><br>
+        <input type="button" value="submit" onclick="maxprime()">
+        <p id="ans" ></p>
+       </center>
+    </body>
+</html> 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+         function gre(){
+                var v1=parseFloat(document.getElementById('num1').value);
+                var v2=parseFloat(document.getElementById('num2').value);
+                var v3=parseFloat(document.getElementById('num3').value);
+                if(v1>v2 && v1>v3)
+            {
+                console.log(v1 + " is greater ");
+            }
+            else if(v2>v1 && v2>v3)
+            {
+                console.log(v2 + " is greater ");
+            }
+            else{
+                console.log(v3 + " is greater ");
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h4> Finding Largest Number </h4>
+        <p>Enter 1st num:</p>
+        <input type="number" id="num1" name="numb1" placeholder="enter first number"><br><br>
+        <p>Enter 2nd number: </p>
+        <input type="number" id="num2" name="numb2" placeholder="enter second number"><br><br>
+        <p>Enter 3rd number: </p>
+        <input type="number" id="num3" name="numb3" placeholder="enter third number"><br><br>
+        <input type="button" value="submit" onclick="gre()">
+
+        </center>
+    </body>
+</html>

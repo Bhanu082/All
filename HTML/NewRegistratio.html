@@ -1,0 +1,17 @@
+<form name="Bhanu">
+   Enter a User name:<input type="text" id="username" min="3" max="10">
+   <span id="error" style="color: red; display:none;">please enter user name</span>
+   <button type="submit">Submit</button> 
+</form>
+<script>
+var  username=document.getElementById('username');
+var error=document.getElementById('error');
+username.addEventListener('blur',function (){
+    if(username.value.trim()===''){
+        error.style.display='inline';
+    }
+    else{
+        error.style.display='none';
+    }
+});
+</script>

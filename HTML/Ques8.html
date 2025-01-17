@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function facto(){
+            var v=parseFloat(document.getElementById('bnum').value)
+            var sum=1;
+
+              for(var i=1;i<=v;i++)
+               {
+             sum=sum*i;
+               }           
+             console.log("The factorial: " + sum);
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h4> Factorial of a Number </h4>
+        enter a number:
+        <input type="number" id="bnum" name="bname" placeholder="factorial"><br><br>
+        <input type="button" value="submit" onclick="facto()">
+        </center>
+    </body>
+</html>

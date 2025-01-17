@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function even(){
+            var v=parseFloat(document.getElementById('num').value);
+             if(v%2==0)
+            {
+                alert("Even number");
+            }
+            else{
+                alert("Odd number");
+            }
+            }
+
+        </script>
+    </head>
+    <body>
+        <center>
+        <h4>Odd / Even Number</h4>
+        <input type="number" id="num" name="bname" placeholder="Enter a number"><br><br>
+        <input type="button" value="submit" onclick="even()">
+        </center>
+    </body>
+</html>

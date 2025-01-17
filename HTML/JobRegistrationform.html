@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Job Form</title>
+    </head>
+    <body>
+        <h1>Job Application Form </h1>
+        <table>
+            <tr>
+                <td><b>First Name:</b></td>
+                <td><b>Last Name:</b></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="fname" style="width: 80px; margin-right:10px "></td>
+                <td><input type="text" id="lname" style="width: 80px; margin-right:10px "></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Father Name:</td>
+                <td><input type="text" id="faname" style="width:80px; margin-right:10px "></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>DOB:</td><br>
+                <td><input type="date" id="date1" style="width: 100px; margin-right:10px "></td>
+            </tr>
+
+            <tr>
+                <td>Contact:</td>
+                <td><input type="number" id="num" style="width: 120px; margin-right:10px "></td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" id="email1" style="width: 150px; margin-right:10px "></td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" id="password" style="width: 100px; margin-right:10px "></td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="text" id="cpassword" style="width: 100px; margin-right:10px "></td>
+            </tr>
+            
+    </table>
+
+    <table>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" id="male" style="width: 60px; margin-right: 10px">Male</td>
+            <td><input type="radio" id="female" style="width: 40px; margin-right: 10px">Female </td>
+            <td><input type="radio" id="not disclose" style="width: 40px; margin-right: 10px">Not disclose </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <label>Qualification: </label>
+                <select id="Qualify" name="Qualify" style="width: 140px; margin-right: 10px">
+                    <option value="">Select Qualification</option>
+                    <option value="ssc">SSC</option>
+                    <option value="intermediate">10+2 (Intermediate)</option>
+                    <option value="bachelor_degree">Bachelor's Degree</option>
+                    <option value="master_degree">Master's Degree</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Mention Your Degree:</td>
+            <td><input type="checkbox" name="Degree" value="B.Tech">B.Tech </td>
+            <td><input type="checkbox" name="Degree" value="B.A">B.A</td>
+            <td><input type="checkbox" name="Degree" value="MBA">MBA</td>
+            <td><input type="checkbox" name="Degree" value="MCA">MCA</td>   
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Do you have any Experience:</td>
+            <td><input type="radio" name="Practice" value="yes"> Yes</td>
+            <td><input type="radio" name="Practice" value="no"> No</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Languages Known:</td>
+            <td>
+                <select id="known" name="known" required>
+                    <option value="">Select language</option>
+                    <option value="English">English</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Tamil">Tamil</option>
+                    <option value="Malayalam">Malayalam</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    
+    <table>
+        <tr>
+            <td>Address:</td>
+            <td>
+                <textarea id="Address" name="address" placeholder="enter your address:"></textarea></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>State:</td>
+            <td>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="AndhraPradesh">Andhra Pradesh</option>
+                    <option value="Telengana">Telengana</option>
+                    <option value="Tamilnadu">Tamil Nadu</option>
+                    <option value="Kerala">Kerala</option>
+                </select></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Pincode:</td>
+            <td><input type="number" id="Pincode" name="Pin" style="width:70px; margin-right:10px" ></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Describe about your Skills:</td>
+            <td><textarea id="skill" name="skills" style="width:200px; margin-right : 10px"></textarea></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>LinkedIn Profile:</td>
+            <td><input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile" ></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+          <td>Profile Picture:</td>
+          <td> <input type="file" id="profile_picture" name="profile_picture" accept="image/*" ></td>  
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>Resume:</td>
+            <td><input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx"></td>
+        </tr>
+    </table>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function def(){
+                var v=confirm("are you sure");
+                 if(v==true)
+                 {
+                    alert("ok");
+                 }else{
+                    alert("cancel");
+                 }
+            }
+
+            function sub1(){
+                document.write(history.back());
+            } 
+            function fun(){
+               document.write(navigator.appCodeName+"<br>");
+               document.write(navigator.appName+"<br>");
+               document.write(navigator.appVersion+"<br>");
+               document.write(navigator.cookieEnabled+"<br>");
+               document.write(navigator.userAgent+"<br>");
+               document.write(navigator.userActivation+"<br>");
+               document.write(navigator.languages+"<br>");
+               document.write(navigator.userlanguage+"<br>");
+               document.write(navigator.plugins+"<br>");
+               document.write(navigator.systemlanguage+"<br>");
+               document.write(navigator.mimeTypes+"<br>");
+               document.write(navigator.platform+"<br>");
+               document.write(navigator.onLine+"<br>");
+            }
+        </script>
+        <input type="button" value="submit" onclick="def()">
+        <input type="button" value="submit" onclick="sub1()">
+        <input type="button" value="submit" onclick="fun()">
+    </body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Validation Form</title>
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/3774243/pexels-photo-3774243.jpeg?cs=srgb&dl=pexels-souvenirpixels-3774243.jpg&fm=jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+        }
+        table {
+            background-color:rgba(0, 0, 0, 0.5);
+            padding: 20px; 
+            border-radius: 20px;
+        }
+        .box{
+            background-color: white ;
+            border-radius: 10px;
+            color: black;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Job Registration Form</h1>
+
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input type="text" id="name" class="box" name="firstn" placeholder="Enter Name" onblur="firstName()">
+                    <div id="ferror" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" id="lname" class="box" name="lastn" placeholder="Enter Name" onblur="lastName()">
+                    <div id="lerror" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Father's Name:</td>
+                <td>
+                    <input type="text" id="fname" class="box" name="fathername" placeholder="Enter Father's Name" onblur="fatherName()">
+                    <div id="error" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Date Of Birth:</td>
+                <td>
+                    <input type="date" id="date" class="box" name="date" >
+                </td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td>
+                    <input type="tel" id="phno" class="box" name="phnm" placeholder="Enter Phone Number" onblur="phoneNumber()">
+                    <div id="phError" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Your Email:</td>
+                <td>
+                    <input type="email" id="em" class="box" name="eml" placeholder="Enter Email" onblur="email()">
+                    <div id="emError" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" id="pd" class="box" name="pwd" placeholder="Enter Password" onblur="password1()">
+                    <div id="psd" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td>
+                    <input type="password" id="pd1" class="box" name="pwd1" placeholder="Confirm Password" onblur="confirmPassword()">
+                    <div id="psd1" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio"  name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="not disclose"> Not Disclose
+                </td>
+            </tr>
+            <tr>
+                <td>Qualification:</td>
+                <td>
+                    <select id="Qualify" class="box" name="Qualify" required>
+                        <option value="">Select Qualification</option>
+                        <option value="ssc">SSC</option>
+                        <option value="intermediate">10+2 (Intermediate)</option>
+                        <option value="bachelor_degree">Bachelor's Degree</option>
+                        <option value="master_degree">Master's Degree</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Mention your Degree:</td>
+                <td>
+                    <label><input type="checkbox" name="Degree" value="B.Tech"> B.Tech</label>
+                    <label><input type="checkbox" name="Degree" value="B.A"> B.A</label>
+                    <label><input type="checkbox" name="Degree" value="MBA"> MBA</label>
+                    <label><input type="checkbox" name="Degree" value="MCA"> MCA</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Do You have Any Work Experience:</td>
+                <td>
+                    <label><input type="radio" name="Practice" value="yes"> Yes</label>
+                    <label><input type="radio" name="Practice" value="no"> No</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Languages Known:</td>
+                <td>
+                    <select id="known" class="box" name="known" required>
+                        <option value="">Select language</option>
+                        <option value="English">English</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Malayalam">Malayalam</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Describe Yourself:</td>
+                <td>
+                    <textarea id="your" class="box" name="yoss" placeholder="Enter your description:" onblur="self()"></textarea>
+                    <div id="selferr" style="color: red;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>LinkedIn Profile:</td>
+                <td>
+                    <input type="url" id="linkedin" class="box" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                </td>
+            </tr>
+            <tr>
+                <td>Profile Picture:</td>
+                <td>
+                    <input type="file" id="profile_picture" class="box" name="profile_picture" accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td>Resume:</td>
+                <td>
+                    <input type="file" id="resume" class="box" name="resume" accept=".pdf, .doc, .docx">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Address:</td>
+                <td>
+                    <textarea id="Address" class="box" name="Addresss" placeholder="Enter your address:"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <input type="button"  value="Submit" onclick="validateform()">
+    </center>
+
+    <script>
+         function firstName() {
+            const v = document.getElementById("name");
+            const err = document.getElementById('ferror');
+            const reg = /^[a-zA-Z ]*$/;
+            err.innerHTML = "";
+
+            if (v.value.length == '') {
+                err.innerHTML = "Field should not be empty";
+            } else if (v.value.trim().length < 3) {
+                err.innerHTML = "Must be greater than 3 characters";
+            } else if (v.value.trim().length > 10) {
+                err.innerHTML = "Must be less than 10 characters";
+            } else if (!v.value.match(reg)) {
+                err.innerHTML = "Allows Alphabetics only";
+            }
+        }
+
+        function lastName() {
+            const va = document.getElementById("lname");
+            const erro = document.getElementById('lerror');
+            const reg = /^[a-zA-Z ]*$/;
+            erro.innerHTML = "";
+
+            if (va.value.length == '') {
+                erro.innerHTML = "Field should not be empty";
+            } else if (va.value.trim().length < 3) {
+                erro.innerHTML = "Must be greater than 3 characters";
+            } else if (va.value.trim().length > 10) {
+                erro.innerHTML = "Must be less than 10 characters";
+            } else if (!va.value.match(reg)) {
+                erro.innerHTML = "Allows Alphabetics only";
+            }
+        }
+
+        function fatherName() {
+            const v1 = document.getElementById("fname");
+            const err1 = document.getElementById('error');
+            const reg = /^[a-zA-Z ]*$/;
+            err1.innerHTML = "";
+
+            if (v1.value.length == '') {
+                err1.innerHTML = "Field should not be empty";
+            } else if (v1.value.trim().length < 6) {
+                err1.innerHTML = "Must be greater than 6 characters";
+            } else if (v1.value.trim().length > 15) {
+                err1.innerHTML = "Must be less than 15 characters";
+            } else if (!v1.value.match(reg)) {
+                err1.innerHTML = "Must be letters only";
+            }
+        }
+
+        function phoneNumber() {
+            const l = document.getElementById("phno");
+            const er = document.getElementById("phError");
+            const reg = /^[0-9]*$/;
+            er.innerHTML = "";
+
+            if (l.value.length == '') {
+                er.innerHTML = "Field must be filled";
+            } else if (l.value.length < 4) {
+                er.innerHTML = "Min 3 digits required.";
+            } else if (l.value.length > 11) {
+                er.innerHTML = "Have to enter 10 digits";
+            } else if (!l.value.match(reg)){
+                er.innerHTML = "Allows only numbers."
+            }
+        }
+
+        function email() {
+            const e = document.getElementById("em");
+            const e1 = document.getElementById("emError");
+            const reg1 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            e1.innerHTML = "";
+
+            if (e.value.length == '') {
+                e1.innerHTML = "Please enter your email";
+            } else if (!e.value.match(reg1)) {
+                e1.innerHTML = "Please enter a valid email address";
+            }
+        }
+
+
+        function password1() {
+            const p = document.getElementById("pd");
+            const e2 = document.getElementById("psd");
+            const reg2 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            e2.innerHTML = "";
+
+            if (p.value.length == '') {
+                e2.innerHTML = "Please enter a password";
+            }else if(p.value.length < 6){
+               e2.innerHTML="Min required characters for password is 6";
+            } else if(p.value.length > 14){
+                e2.innerHTML="Max characters in password is 14";
+            }else if (!p.value.match(reg2)) {
+                e2.innerHTML = "Enter a valid password (it includes letters, special characters and numbers only)";
+            }
+        }
+
+        function confirmPassword() {
+            const p = document.getElementById("pd");
+            const p1 = document.getElementById("pd1");
+            const e3 = document.getElementById("psd1");
+            e3.innerHTML = "";
+
+            if (p1.value.length == '') {
+                e3.innerHTML = "Please confirm your password";
+            }else if(p1.value.length < 6)
+            {
+              e3.innerHTML="passowrd must have 6 characters";
+            } else if (p.value !== p1.value) {
+                e3.innerHTML = "Passwords does not matched";
+            }
+        }
+
+        function self() {
+            const b = document.getElementById("your");
+            const e = document.getElementById("selferr");
+            e.innerHTML = "";
+
+            if (b.value.length == '') {
+                e.innerHTML = "Field must be filled";
+            } else if (b.value.length < 150) {
+                e.innerHTML = "Min 150 words required.";
+            } else if (b.value.length >= 300) {
+                e.innerHTML = "Max 300 words required.";
+            }
+        }
+
+function validateform() {
+    firstName();
+    lastName();
+    fatherName();
+    phoneNumber();
+    email();
+    password1();
+    confirmPassword();
+    self();
+    
+    let isValid = true; 
+
+  
+    const errorMessages = [
+        document.getElementById('ferror').innerHTML,
+        document.getElementById('lerror').innerHTML,
+        document.getElementById('error').innerHTML,
+        document.getElementById('phError').innerHTML,
+        document.getElementById('emError').innerHTML,
+        document.getElementById('psd').innerHTML,
+        document.getElementById('psd1').innerHTML,
+        document.getElementById('selferr').innerHTML
+    ];
+
+
+    for (let message of errorMessages) {
+        if (message) {
+            isValid = false;
+            break;
+        }
+    }
+
+    const v = document.getElementById("name").value;
+    const va = document.getElementById("lname").value;
+    const v1 = document.getElementById("fname").value;
+    const l = document.getElementById("phno").value;
+    const e = document.getElementById("em").value;
+    const p = document.getElementById("pd").value;
+    const p1 = document.getElementById("pd1").value;
+    const b = document.getElementById("your").value;
+    const dob = document.getElementById("date").value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value || "Not Disclosed";
+    const qualification = document.getElementById("Qualify").value;
+    const languagesKnown = document.getElementById("known").value;
+    const linkedin = document.getElementById("linkedin").value;
+    const resume = document.getElementById("resume").files[0]?.name || "No resume uploaded";
+    const profilePicture = document.getElementById("profile_picture").files[0]?.name || "No profile picture uploaded";
+    const address = document.getElementById("Address").value;
+
+    if (isValid && v.trim().length >= 3 && va.trim().length >= 3 && v1.trim().length >= 6 && l.trim().length >= 4 && e.trim().length > 0 && p.trim().length >= 6 && p1.trim().length >= 6 && b.trim().length >= 150) {
+        document.write("First Name : " + v + "<br><br>");
+        document.write("Last Name : " + va + "<br><br>");
+        document.write("Father Name : " + v1 + "<br><br>");
+        document.write("Phone Number : " + l + "<br><br>");
+        document.write("Email : " + e + "<br><br>");
+        document.write("Enter Password : " + p + "<br><br>");
+        document.write("Confirm Password : " + p1 + "<br><br>");
+        document.write("Describe your skills : " + b + "<br><br>");
+        document.write("Date of Birth : " + dob + "<br><br>");
+        document.write("Gender : " + gender + "<br><br>");
+        document.write("Qualification : " + qualification + "<br><br>");
+        document.write("Languages Known : " + languagesKnown + "<br><br>");
+        document.write("LinkedIn Profile : " + linkedin + "<br><br>");
+        document.write("Resume : " + resume + "<br><br>");
+        document.write("Profile Picture : " + profilePicture + "<br><br>");
+        document.write("Address : " + address + "<br><br>");
+    } else {
+        alert("Please fill all required fields with the correct information.");
+    }
+}
+
+
+           
+    </script>
+</body>
+</html>

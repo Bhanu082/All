@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Application2</title>
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRJ3w5Xj1xEJ7JnZYQzd3zuOigWDlUNRiCfA&s'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="border: 1px solid #ccc; padding: 20px; background-color: white; width: 900px; margin: auto; border-radius: 10px;">
+        <div style="background-color: #d3d3d3; padding: 10px; border-radius: 5px;">
+            <h1>Business Loan Application</h1>
+            <p>Loan Details</p>
+        </div>
+        <hr>
+
+        <p><b>Loan Reason</b></p>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <label>
+                <input type="radio" name="business-type" value="sole-proprietor" required>
+                Construction
+            </label>
+            <label>
+                <input type="radio" name="business-type" value="partnership">
+                Asset Purchase
+            </label>
+            <label>
+                <input type="radio" name="business-type" value="corporation">
+                Refinancing
+            </label>
+            <label>
+                <input type="radio" name="business-type" value="other">
+                Other
+            </label>
+        </div>
+
+        <p><b>Project Gross Value</b></p>
+        <input type="text" id="project-gross-value" name="project-gross-value" required><br><br>
+
+        <p><b>Loan Amount</b></p>
+        <input type="text" id="loan-amount" name="loan-amount" required><br><br>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button onclick="window.location.href='Loan3.html';" style="width: 100px; height: 30px; padding: 5px 10px; font-size: 12px; border: none; background-color: gainsboro; color: black; border-radius: 5px; cursor: pointer;">Back</button>
+            <button onclick="window.location.href='Loan5.html';" style="width: 100px; height: 30px; padding: 5px 10px; font-size: 12px; border: none; background-color: gainsboro; color: black; border-radius: 5px; cursor: pointer;">Next</button>
+        </div>
+    </div>
+
+</body>
+</html>

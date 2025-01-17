@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/premium-vector/beautiful-landscape-nature-background-images-free-download-freepik-vector_1305309-83.jpg?semt=ais_hybrid'); 
+    background-size: cover; 
+    background-position: center; 
+}
+/* .miracle {
+    background-image: url('https://th.bing.com/th/id/OIG2.9O4YqGf98tiYzjKDvg7L'); /* Background for Home page */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login {
+    background-image: url('https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg'); /* Background for Login page */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+/* .about {
+    background-image: url('https://img.freepik.com/premium-vector/beautiful-landscape-nature-background-images-free-download-freepik-vector_1305309-83.jpg'); /* Background for About page */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}  */
+
+header {
+   
+    color: white;
+    padding: 10px 20px;
+    text-align:center;
+    
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    color : white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #f1f1f1;
+} */

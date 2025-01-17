@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function check()
+            {
+                var v=parseFloat(document.getElementById('num').value);
+                if(v>0)
+            {
+                document.write("Positive");
+            }
+            else if(v<0)
+            {
+                document.write("Negative");
+            }
+            else{
+                document.write("Zero");
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h4>Checking id a number is Positive, Negative or Zero</h4>
+        enter a number:
+        <input type="number" id="num" name="num1" placeholder="enter number"><br><br>
+        <input type="button" value="submit" onclick="check()">
+        </center>
+    </body>
+</html>
